@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/WatchList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7264
+        }
+      ],
+      "UpstreamPathTemplate": "/pollution/api/watchlist",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/CreateUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7264
+        }
+      ],
+      "UpstreamPathTemplate": "/pollution/api/user",
+      "UpstreamHttpMethod": ["Post" ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}

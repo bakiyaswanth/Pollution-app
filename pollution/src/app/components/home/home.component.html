@@ -1,0 +1,67 @@
+<section class="vh-100 gradient-custom"> 
+<div class="selectwrapper" class="form__group">
+<div class="selectcontainer">
+
+  <mat-form-field  class="form__input" appearance="fill">
+    <mat-label class="x">Country</mat-label>
+    <mat-select [(ngModel)]="countrySelected"  (ngModelChange)="onCountrySelected($event)" >
+      <mat-option  *ngFor="let user of country" [value]="user.country "(click)="getc(user.country)" >
+        {{user.country}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field  class="form__input" appearance="fill">
+    <mat-label class="x">State</mat-label>
+    <mat-select [(ngModel)]="stateSelected"  (ngModelChange)="onStateSelected()" >
+      <mat-option *ngFor="let user of state" [value]="user.state" (click)="getst(user.state)">
+        {{user.state}}
+      </mat-option>
+    </mat-select>
+
+
+  </mat-form-field>
+
+  <mat-form-field  class="form__input" appearance="fill">
+    <mat-label class="x">City</mat-label>
+    <mat-select [(ngModel)]="citySelected">
+      <mat-option *ngFor="let user of city" [value]="user.city" (click)="getct(user.city)">
+        {{user.city}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <button class="bttn" (click)="getPollutionData()" >Search</button>
+   <br>
+  <button class="bttn" (click)="addWatch()" *ngIf="checkLogout()" >Add</button>
+  <div class="container">          
+    <div class="background">
+      <div class="Circle1"></div>
+      <div class="Circle2"></div>
+      <div class="Circle3"></div>
+      <div class="content">
+        <h1 class="Condition">AQI </h1>
+        <h1 class="Temp">{{v1}}</h1> 
+        <h1 class="Time">PM 2.5</h1>
+        <h1 class="Location"><i class="material-icons locationIcon">place</i>{{v2}},{{v3}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

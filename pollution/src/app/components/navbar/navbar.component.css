@@ -1,0 +1,10 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+
+    .btn{
+      background-color: #0a0909;
+      margin-right: 10px;
+   }

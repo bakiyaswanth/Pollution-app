@@ -1,0 +1,84 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-10">Registration Form</h3>
+              <p class="text-center fs-3" [ngClass]="isAccountCreated?'text-success pb-1': 'text-danger pb-1'">{{displayMsg}}</p>
+              <form [formGroup]="registerForm" (ngSubmit)="registerSubmited()">
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="Name" class="form-control form-control-lg" formControlName="name" />
+                      <label class="form-label" for="Name" >Name</label>
+                      <div class="form-text text-danger" *ngIf="name.errors?.['required'] && (name.touched || name.dirty)"> 
+                        This Field is Required
+                      </div>
+                      <div class="form-text text-danger" *ngIf="name.errors?.['minlength'] && (name.touched || name.dirty)"> 
+                        Name is too short
+                      </div>
+                      <div class="form-text text-danger" *ngIf="name.errors?.['pattern'] && (name.touched || name.dirty)"> 
+                        Name should only contain alphabets
+                      </div>
+                    </div>
+  
+                  </div>
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="UserName" class="form-control form-control-lg" formControlName="userName"/>
+                      <label class="form-label" for="User Name" >User Name</label>
+                      <div class="form-text text-danger" *ngIf="userName.errors?.['required'] && (userName.touched || userName.dirty)"> 
+                        This Field is Required
+                      </div>
+                      <div class="form-text text-danger" *ngIf="userName.errors?.['minlength'] && (userName.touched || userName.dirty)"> 
+                        User Name is too short
+                      </div>
+                    </div>  
+                  </div>
+                </div>  
+                <div class="row">
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="email" id="email" class="form-control form-control-lg" formControlName="email" />
+                      <label class="form-label" for="email"  >Email</label>
+                      <div class="form-text text-danger" *ngIf="email.errors?.['required'] && ( email.dirty ||email.touched  )"> 
+                        This Field is Required
+                      </div>
+                      <div class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.dirty ||email.touched)"> 
+                        Email is Invalid
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+  
+                    <div class="form-outline">
+                      <input type="password" id="password" class="form-control form-control-lg" formControlName="password"/>
+                      <label class="form-label" for="password"  >Password</label>
+                      <div class="form-text text-danger" *ngIf="password.errors?.['required'] && (password.touched ||password.dirty)"> 
+                        This Field is Required
+                      </div>
+                      <div class="form-text text-danger" *ngIf="password.errors?.['pattern'] && (password.touched ||password.dirty)"> 
+                        Password is Not valid
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                <div class="mt-4 pt-2">
+                  <button type="submit" class="btn btn-primary btn-lg"  value="submit" [disabled]="registerForm.invalid"> submit</button>
+                                    
+                </div>  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

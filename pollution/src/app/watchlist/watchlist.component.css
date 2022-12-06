@@ -1,0 +1,58 @@
+/* .button{
+    text-align: right;
+    margin-right: 10px;
+} */
+
+/* section{
+  background-image: url('https://www.washingtonpost.com/blogs/worldviews/files/2016/02/global_abs_2014.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  } */
+/*   section{
+    background-image: url('https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.centerme{
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+table{
+  width: 70vw;
+  position: relative;
+  top: -80px;
+}
+
+.watch{
+  position: relative;
+  top: -150px;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  text-align: center;
+} */
+
+html,
+body,
+.intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+    width: 70vw;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: .5rem;
+}

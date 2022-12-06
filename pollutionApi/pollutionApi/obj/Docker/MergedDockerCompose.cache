@@ -1,0 +1,18 @@
+name: dockercompose16053551747630351089
+services:
+  apigateway:
+    build:
+      context: C:\Users\yaswanth\Downloads\project\pollutionApi
+      dockerfile: ApiGateway\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose16053551747630351089_default

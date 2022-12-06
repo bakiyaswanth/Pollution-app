@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "A7zbN+4pRtQeNPsWEKH5bA0fPI4Jifkf54syFhyLPDQ=",
+  "Source": "pollutionApi",
+  "BasePath": "_content/pollutionApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
